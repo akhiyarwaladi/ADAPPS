@@ -6,6 +6,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MenuUtaman extends AppCompatActivity {
-
+    Toolbar toolbar;
     private RecyclerView recyclerView;
     private AdabAdapter adapter;
     private List<Adab> adabList;
@@ -27,6 +28,10 @@ public class MenuUtaman extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menuutama);
+        toolbar = (Toolbar)findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setTitle("ADAPPS");
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         adabList = new ArrayList<>();
