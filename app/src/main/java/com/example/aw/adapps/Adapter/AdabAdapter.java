@@ -10,7 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,14 +29,14 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, count;
         public ImageView thumbnail;
-        public ImageButton bDetail;
+        public Button bDetail;
 
         public MyViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
             count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
-            bDetail = (ImageButton) view.findViewById(R.id.bDetail);
+            bDetail = (Button) view.findViewById(R.id.bDetail);
         }
     }
 
@@ -58,6 +58,7 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
         final Adab adab = albumList.get(position);
         holder.title.setText(adab.getNama());
         holder.count.setText(adab.getDeskripsi() + " songs");
+        Glide.with(mContext).load(adab.getUrlImage()).into(holder.thumbnail);
 
         holder.bDetail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,13 +72,10 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
                 mContext.startActivity(intent);
             }
         });
-        // loading album cover using Glide library
-        Glide.with(mContext).load(adab.getUrlImage()).into(holder.thumbnail);
     }
 
     @Override
     public int getItemCount() {
         return albumList.size();
     }
-
 }

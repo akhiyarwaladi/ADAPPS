@@ -18,7 +18,7 @@ public class MenuUtamaDetails extends AppCompatActivity {
     Toolbar toolbar;
     TextView judul, kategori, deskripsi;
     ImageView gambar;
-    String Judul, Kategori, Deskripsi;
+    String Judul, Deskripsi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -12,7 +12,7 @@ import com.example.aw.adapps.R;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private static int Splash = 5000;
+    private static int Splash = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
