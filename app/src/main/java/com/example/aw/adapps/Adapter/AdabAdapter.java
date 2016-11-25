@@ -6,27 +6,21 @@ package com.example.aw.adapps.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.aw.adapps.Activities.MenuUtamaDetails;
-import com.example.aw.adapps.Activities.MenuUtaman;
+import com.example.aw.adapps.Model.Adab;
 import com.example.aw.adapps.R;
-
 import java.util.List;
 
-/**
- * Created by Ravi Tamada on 18/05/16.
- */
 public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> {
 
     private Context mContext;
@@ -35,12 +29,14 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, count;
         public ImageView thumbnail;
+        public ImageButton bDetail;
 
         public MyViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
             count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
+            bDetail = (ImageButton) view.findViewById(R.id.bDetail);
         }
     }
 
@@ -63,10 +59,10 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
         holder.title.setText(adab.getNama());
         holder.count.setText(adab.getDeskripsi() + " songs");
 
-        holder.thumbnail.setOnClickListener(new View.OnClickListener() {
+        holder.bDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "sad"+adab.getNama(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "pilih "+adab.getNama(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(mContext, MenuUtamaDetails.class);
                 intent.putExtra("nama", adab.getNama());
                 intent.putExtra("deskripsi", adab.getDeskripsi());

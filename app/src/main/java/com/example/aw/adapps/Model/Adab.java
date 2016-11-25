@@ -1,4 +1,4 @@
-package com.example.aw.adapps.Adapter;
+package com.example.aw.adapps.Model;
 
 /**
  * Created by AW on 11/24/2016.

@@ -12,10 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.aw.adapps.Adapter.Adab;
 import com.example.aw.adapps.R;
-
-import java.util.List;
 
 public class MenuUtamaDetails extends AppCompatActivity {
     Toolbar toolbar;
@@ -43,13 +40,14 @@ public class MenuUtamaDetails extends AppCompatActivity {
         Judul = intent.getStringExtra("nama");
         Deskripsi = intent.getStringExtra("deskripsi");
         int image_link = intent.getIntExtra("gambar", R.drawable.rightarrow);
-        Glide.with(this).load(image_link).into(gambar);
 
-//        Log.d("Judul", Judul);
-//        Log.d("Deskripsi", Deskripsi);
+        Log.d("Judul", Judul);
+        Log.d("Deskripsi", Deskripsi);
 
         judul.setText(Judul);
         deskripsi.setText(Deskripsi);
+        kategori.setText(Judul);
+        Glide.with(this).load(image_link).into(gambar);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
