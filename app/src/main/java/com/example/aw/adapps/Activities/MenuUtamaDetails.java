@@ -100,6 +100,11 @@ public class MenuUtamaDetails extends AppCompatActivity {
             Toast.makeText(this, "refresh", Toast.LENGTH_SHORT).show();
             return true;
         }
+        else if(id == R.id.action_about){
+            Intent intent = new Intent(this, Keterangan.class);
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }

@@ -1,5 +1,6 @@
 package com.example.aw.adapps.Activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -96,6 +97,11 @@ public class MenuUtaman extends AppCompatActivity {
         }
         else if(id == R.id.action_refresh){
             Toast.makeText(this, "refresh", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        else if(id == R.id.action_about){
+            Intent intent = new Intent(this, Keterangan.class);
+            startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
