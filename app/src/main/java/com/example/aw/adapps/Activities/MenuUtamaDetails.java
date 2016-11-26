@@ -1,6 +1,7 @@
 package com.example.aw.adapps.Activities;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -15,9 +16,13 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.aw.adapps.R;
+import com.facebook.FacebookSdk;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
 
 public class MenuUtamaDetails extends AppCompatActivity {
     private Toolbar toolbar;
+    private ShareDialog shareDialog;
 
     private TextView judul, kategori, deskripsi;
     private ImageView gambar;
@@ -29,6 +34,8 @@ public class MenuUtamaDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menuutamadetails);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        shareDialog = new ShareDialog(this);
 
         toolbar = (Toolbar)findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
@@ -45,6 +52,17 @@ public class MenuUtamaDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MenuUtamaDetails.this, "shared", Toast.LENGTH_SHORT).show();
+                if (ShareDialog.canShow(ShareLinkContent.class)) {
+                    ShareLinkContent linkContent = new ShareLinkContent.Builder()
+                            .setContentTitle("Hello Guys")
+                            .setContentDescription(
+                                    "Coder who learned and share")
+                            .setContentUrl(Uri.parse("http://instinctcoder.com"))
+                            .setImageUrl(Uri.parse("https://scontent-sin1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/12936641_845624472216348_1810921572759298872_n.jpg?oh=72421b8fa60d05e68c6fedbb824adfbf&oe=577949AA"))
+                            .build();
+
+                    shareDialog.show(linkContent);
+                }
             }
         });
 
