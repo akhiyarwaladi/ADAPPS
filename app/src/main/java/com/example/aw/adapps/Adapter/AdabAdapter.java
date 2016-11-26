@@ -65,7 +65,7 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
             public void onClick(View v) {
                 Toast.makeText(mContext, "pilih "+adab.getNama(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(mContext, MenuUtamaDetails.class);
-                intent.putExtra("id", adab.getId());
+                intent.putExtra("idd", adab.getId());
                 intent.putExtra("nama", adab.getNama());
                 intent.putExtra("deskripsi", adab.getDeskripsi());
                 intent.putExtra("gambar", adab.getUrlImage());

@@ -52,13 +52,16 @@ public class MenuUtamaDetails extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        Id = intent.getStringExtra("id");
+        int idd = intent.getIntExtra("idd", 1);
         Judul = intent.getStringExtra("nama");
         Deskripsi = intent.getStringExtra("deskripsi");
         int image_link = intent.getIntExtra("gambar", R.drawable.rightarrow);
+        Id = Integer.toString(idd);
 
+        Log.d("Id", Id);
         Log.d("Judul", Judul);
         Log.d("Deskripsi", Deskripsi);
+
 
         judul.setText(Judul);
         deskripsi.setText(Deskripsi);
@@ -74,7 +77,7 @@ public class MenuUtamaDetails extends AppCompatActivity {
                             .setContentTitle(Judul)
                             .setContentDescription(Deskripsi)
                             .setContentUrl(Uri.parse("http://instinctcoder.com"))
-                            .setImageUrl(Uri.parse("https://scontent-sin1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/12936641_845624472216348_1810921572759298872_n.jpg?oh=72421b8fa60d05e68c6fedbb824adfbf&oe=577949AA"))
+                            .setImageUrl(Uri.parse("http://sipadat.agri.web.id/"+Id+".png"))
                             .build();
 
                     shareDialog.show(linkContent);
