@@ -46,33 +46,33 @@ public class MenuUtaman extends AppCompatActivity {
     }
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.adappsicon,
-                R.drawable.adappsicon,
+                R.drawable.makan,
+                R.drawable.tidur,
                 R.drawable.adappsicon,
                 R.drawable.adappsicon,
                 R.drawable.adappsicon,
                 R.drawable.adappsicon,
                 R.drawable.adappsicon};
 
-        Adab adab = new Adab(1, "True Romance", "lalala", covers[0]);
+        Adab adab = new Adab(1, "Adab Makan dan Minum", "lalala", covers[0]);
         adabList.add(adab);
 
-        adab = new Adab(2, "Xscpae", "blabla", covers[1]);
+        adab = new Adab(2, "Adab Tidur dan Bangun", "blabla", covers[1]);
         adabList.add(adab);
 
-        adab = new Adab(3, "Maroon 5", "yayaya", covers[2]);
+        adab = new Adab(3, "Adab Membuang Hajat", "yayaya", covers[2]);
         adabList.add(adab);
 
-        adab = new Adab(4, "Fripside", "Two Soul Toward the Truth", covers[3]);
+        adab = new Adab(4, "Adab Berpakaian", "Two Soul Toward the Truth", covers[3]);
         adabList.add(adab);
 
-        adab = new Adab(5, "Yanagi nagi", "Blabla", covers[4]);
+        adab = new Adab(5, "Adab di Jalanan", "Blabla", covers[4]);
         adabList.add(adab);
 
-        adab = new Adab(6, "Lisa", "Sword art Online", covers[5]);
+        adab = new Adab(6, "Adab Memberi Salam", "Sword art Online", covers[5]);
         adabList.add(adab);
 
-        adab = new Adab(7, "Aqours", "Step Zero to One", covers[6]);
+        adab = new Adab(7, "Adab Bergaul", "Step Zero to One", covers[6]);
         adabList.add(adab);
 
         adapter.notifyDataSetChanged();

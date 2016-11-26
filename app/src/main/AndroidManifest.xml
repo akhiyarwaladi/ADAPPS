@@ -22,7 +22,7 @@
         <activity android:name=".Activities.MenuUtaman" />
         <activity android:name=".Activities.SubMenu" />
         <activity android:name=".Activities.SubMenuDetails" />
-        <activity android:name=".Activities.Keterangan"></activity>
+        <activity android:name=".Activities.Keterangan" />
     </application>
 
 </manifest>
