@@ -38,12 +38,6 @@ android:orientation="vertical">
             android:textSize="16sp"
             android:textAlignment="center"
             android:text="Android Apps Developer :"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textAlignment="center"
-            android:text="Indra, Akhiyar, Syamsul"/>
 
     </LinearLayout>
     <com.google.android.flexbox.FlexboxLayout
