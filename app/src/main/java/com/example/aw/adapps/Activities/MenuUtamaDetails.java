@@ -30,7 +30,7 @@ public class MenuUtamaDetails extends AppCompatActivity {
 
     private FloatingActionButton fab;
 
-    private String Judul, Deskripsi;
+    private String Id, Judul, Deskripsi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,7 @@ public class MenuUtamaDetails extends AppCompatActivity {
 
 
         Intent intent = getIntent();
+        Id = intent.getStringExtra("id");
         Judul = intent.getStringExtra("nama");
         Deskripsi = intent.getStringExtra("deskripsi");
         int image_link = intent.getIntExtra("gambar", R.drawable.rightarrow);
