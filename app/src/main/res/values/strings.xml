@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">ADAPPS</string>
-<<<<<<< HEAD
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
@@ -92,7 +91,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
-=======
     <string name="app_id">1344559088890183</string>
->>>>>>> ffc25504e6b70ffb28c266296c018a380a70d691
 </resources>

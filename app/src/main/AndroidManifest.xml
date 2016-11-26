@@ -24,18 +24,13 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Activities.MenuUtamaDetails" />
         <activity android:name=".Activities.MenuUtaman" />
-<<<<<<< HEAD
-        <activity android:name=".Activities.SubMenu" />
-        <activity android:name=".Activities.SubMenuDetails" />
         <activity android:name=".Activities.Keterangan" />
-=======
         <activity android:name=".Activities.Keterangan"></activity>
 
         <provider
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider1344559088890183"
             android:exported="true" />
->>>>>>> ffc25504e6b70ffb28c266296c018a380a70d691
     </application>
 
 </manifest>
