@@ -47,24 +47,7 @@ public class MenuUtamaDetails extends AppCompatActivity {
         deskripsi = (TextView)findViewById(R.id.deskripsi);
         kategori = (TextView)findViewById(R.id.kategori);
         gambar = (ImageView)findViewById(R.id.gambar);
-        share = (Button)findViewById(R.id.bshare);
-        share.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MenuUtamaDetails.this, "shared", Toast.LENGTH_SHORT).show();
-                if (ShareDialog.canShow(ShareLinkContent.class)) {
-                    ShareLinkContent linkContent = new ShareLinkContent.Builder()
-                            .setContentTitle("Hello Guys")
-                            .setContentDescription(
-                                    "Coder who learned and share")
-                            .setContentUrl(Uri.parse("http://instinctcoder.com"))
-                            .setImageUrl(Uri.parse("https://scontent-sin1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/12936641_845624472216348_1810921572759298872_n.jpg?oh=72421b8fa60d05e68c6fedbb824adfbf&oe=577949AA"))
-                            .build();
 
-                    shareDialog.show(linkContent);
-                }
-            }
-        });
 
         Intent intent = getIntent();
         Judul = intent.getStringExtra("nama");
@@ -78,6 +61,23 @@ public class MenuUtamaDetails extends AppCompatActivity {
         deskripsi.setText(Deskripsi);
         kategori.setText(Judul);
         Glide.with(this).load(image_link).into(gambar);
+        share = (Button)findViewById(R.id.bshare);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(MenuUtamaDetails.this, "shared", Toast.LENGTH_SHORT).show();
+                if (ShareDialog.canShow(ShareLinkContent.class)) {
+                    ShareLinkContent linkContent = new ShareLinkContent.Builder()
+                            .setContentTitle(Judul)
+                            .setContentDescription(Deskripsi)
+                            .setContentUrl(Uri.parse("http://instinctcoder.com"))
+                            .setImageUrl(Uri.parse("https://scontent-sin1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/12936641_845624472216348_1810921572759298872_n.jpg?oh=72421b8fa60d05e68c6fedbb824adfbf&oe=577949AA"))
+                            .build();
+
+                    shareDialog.show(linkContent);
+                }
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
