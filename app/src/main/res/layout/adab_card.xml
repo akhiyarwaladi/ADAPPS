@@ -40,6 +40,7 @@
                 android:id="@+id/count"
                 android:layout_toRightOf="@+id/thumbnail"
                 android:layout_below="@+id/title"
+                android:visibility="gone"
                 android:paddingBottom="0dp"/>
 
             <LinearLayout
@@ -52,7 +53,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Detil Adab"
+                    android:text="Lanjutkan Membaca"
                     android:theme="@style/MyButton"
                     android:id="@+id/bDetail"
                     style="@style/Widget.AppCompat.Button.Borderless"/>
