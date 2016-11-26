@@ -2,6 +2,7 @@ package com.example.aw.adapps.Activities;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -26,7 +27,8 @@ public class MenuUtamaDetails extends AppCompatActivity {
 
     private TextView judul, kategori, deskripsi;
     private ImageView gambar;
-    private Button share;
+
+    private FloatingActionButton fab;
 
     private String Judul, Deskripsi;
 
@@ -61,11 +63,11 @@ public class MenuUtamaDetails extends AppCompatActivity {
         deskripsi.setText(Deskripsi);
         kategori.setText(Judul);
         Glide.with(this).load(image_link).into(gambar);
-        share = (Button)findViewById(R.id.bshare);
-        share.setOnClickListener(new View.OnClickListener() {
+
+        fab = (FloatingActionButton)findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(MenuUtamaDetails.this, "shared", Toast.LENGTH_SHORT).show();
                 if (ShareDialog.canShow(ShareLinkContent.class)) {
                     ShareLinkContent linkContent = new ShareLinkContent.Builder()
                             .setContentTitle(Judul)
@@ -78,6 +80,7 @@ public class MenuUtamaDetails extends AppCompatActivity {
                 }
             }
         });
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

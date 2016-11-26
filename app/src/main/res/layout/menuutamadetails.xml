@@ -49,15 +49,6 @@
                         android:layout_marginTop="10dp"
                         android:layout_height="220dp" />
 
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Share"
-                        android:background="@color/colorAccent"
-                        android:textColor="@color/white"
-                        android:layout_gravity="center"
-                        android:id="@+id/bshare"/>
-
                     <TextView
                         android:id="@+id/judul"
                         android:layout_width="wrap_content"
@@ -87,5 +78,13 @@
                 </LinearLayout>
             </ScrollView>
         </android.support.v7.widget.CardView>
+
     </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_share" />
 </LinearLayout>
