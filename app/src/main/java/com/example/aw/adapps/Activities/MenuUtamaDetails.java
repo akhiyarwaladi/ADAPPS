@@ -7,6 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,10 +17,13 @@ import com.bumptech.glide.Glide;
 import com.example.aw.adapps.R;
 
 public class MenuUtamaDetails extends AppCompatActivity {
-    Toolbar toolbar;
-    TextView judul, kategori, deskripsi;
-    ImageView gambar;
-    String Judul, Deskripsi;
+    private Toolbar toolbar;
+
+    private TextView judul, kategori, deskripsi;
+    private ImageView gambar;
+    private Button share;
+
+    private String Judul, Deskripsi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,13 @@ public class MenuUtamaDetails extends AppCompatActivity {
         deskripsi = (TextView)findViewById(R.id.deskripsi);
         kategori = (TextView)findViewById(R.id.kategori);
         gambar = (ImageView)findViewById(R.id.gambar);
+        share = (Button)findViewById(R.id.bshare);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MenuUtamaDetails.this, "shared", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         Intent intent = getIntent();
         Judul = intent.getStringExtra("nama");
@@ -63,7 +75,11 @@ public class MenuUtamaDetails extends AppCompatActivity {
             finish();
         }
         else if(id == R.id.action_logout){
-            Toast.makeText(this, "haha", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "logout", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        else if(id == R.id.action_refresh){
+            Toast.makeText(this, "refresh", Toast.LENGTH_SHORT).show();
             return true;
         }
         return super.onOptionsItemSelected(item);

@@ -24,14 +24,12 @@ public class SplashScreen extends AppCompatActivity {
 
         setContentView(R.layout.splashscreen);
 
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
                 Intent intent = new Intent(SplashScreen.this, MenuUtaman.class);
                 startActivity(intent);
-
                 finish();
 
             }

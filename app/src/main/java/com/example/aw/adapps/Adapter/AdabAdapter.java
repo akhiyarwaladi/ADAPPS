@@ -24,7 +24,7 @@ import java.util.List;
 public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<Adab> albumList;
+    private List<Adab> adabList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, count;
@@ -40,9 +40,9 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
         }
     }
 
-    public AdabAdapter(Context mContext, List<Adab> albumList) {
+    public AdabAdapter(Context mContext, List<Adab> adabList) {
         this.mContext = mContext;
-        this.albumList = albumList;
+        this.adabList = adabList;
     }
 
     @Override
@@ -55,7 +55,7 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        final Adab adab = albumList.get(position);
+        final Adab adab = adabList.get(position);
         holder.title.setText(adab.getNama());
         holder.count.setText(adab.getDeskripsi() + " songs");
         Glide.with(mContext).load(adab.getUrlImage()).into(holder.thumbnail);
@@ -76,6 +76,6 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
 
     @Override
     public int getItemCount() {
-        return albumList.size();
+        return adabList.size();
     }
 }
