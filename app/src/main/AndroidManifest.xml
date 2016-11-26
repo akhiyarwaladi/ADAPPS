@@ -24,6 +24,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Activities.MenuUtamaDetails" />
         <activity android:name=".Activities.MenuUtaman" />
+        <activity android:name=".Activities.Keterangan" />
         <activity android:name=".Activities.Keterangan"></activity>
 
         <provider
