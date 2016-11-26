@@ -41,4 +41,7 @@ dependencies {
     compile 'com.lapism:searchview:4.0'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile "com.squareup.picasso:picasso:2.4.0"
+    compile 'com.google.android:flexbox:0.2.4'
+    compile 'com.mikhaellopez:circularimageview:3.0.2'
+    compile 'com.jakewharton:butterknife:7.0.1'
 }

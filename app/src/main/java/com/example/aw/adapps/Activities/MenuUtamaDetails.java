@@ -76,7 +76,7 @@ public class MenuUtamaDetails extends AppCompatActivity {
                     ShareLinkContent linkContent = new ShareLinkContent.Builder()
                             .setContentTitle(Judul)
                             .setContentDescription(Deskripsi)
-                            .setContentUrl(Uri.parse("http://instinctcoder.com"))
+                            .setContentUrl(Uri.parse("http://agribotipb.xyz/"))
                             .setImageUrl(Uri.parse("http://sipadat.agri.web.id/"+Id+".png"))
                             .build();
 
