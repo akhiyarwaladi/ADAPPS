@@ -48,8 +48,8 @@ public class MenuUtaman extends AppCompatActivity {
         int[] covers = new int[]{
                 R.drawable.makan,
                 R.drawable.tidur,
-                R.drawable.adappsicon,
-                R.drawable.adappsicon,
+                R.drawable.wc,
+                R.drawable.gantibaju,
                 R.drawable.adappsicon,
                 R.drawable.adappsicon,
                 R.drawable.adappsicon};
