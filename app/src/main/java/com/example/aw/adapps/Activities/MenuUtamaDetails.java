@@ -41,7 +41,6 @@ public class MenuUtamaDetails extends AppCompatActivity {
 
         toolbar = (Toolbar)findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("DETIL");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -64,6 +63,7 @@ public class MenuUtamaDetails extends AppCompatActivity {
 
 
         judul.setText(Judul);
+        setTitle(Judul);
         deskripsi.setText(Deskripsi);
         kategori.setText(Judul);
         Glide.with(this).load(image_link).into(gambar);
