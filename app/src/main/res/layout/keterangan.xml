@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.aw.adapps.Activities.Keterangan"
-    android:orientation="vertical">
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context="com.example.aw.adapps.Activities.Keterangan"
+android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -38,13 +38,16 @@
             android:textSize="16sp"
             android:textAlignment="center"
             android:text="Android Apps Developer :"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textAlignment="center"
-            android:text="Indra, Akhiyar, Syamsul"/>
 
     </LinearLayout>
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        app:justifyContent="center"
+        android:layout_height="wrap_content"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        android:id="@+id/fb_buddies"
+        >
 
+    </com.google.android.flexbox.FlexboxLayout>
 </LinearLayout>

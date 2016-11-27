@@ -26,4 +26,5 @@
     <dimen name="imge_book_detail">80dp</dimen>
     <dimen name="app_bar_height">180dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="buddy_circle_size_big">100dp</dimen>
 </resources>
