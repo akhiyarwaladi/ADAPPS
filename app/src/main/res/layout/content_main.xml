@@ -9,12 +9,25 @@
     tools:showIn="@layout/menuutama"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/floating_search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:floatingSearch_searchBarMarginLeft="7dp"
+            app:floatingSearch_searchBarMarginTop="7dp"
+            app:floatingSearch_searchBarMarginRight="7dp"
+            app:floatingSearch_searchHint="Search..."
+            app:floatingSearch_suggestionsListAnimDuration="250"
+            app:floatingSearch_showSearchKey="false"
+            app:floatingSearch_leftActionMode="showSearch"
+            app:floatingSearch_close_search_on_keyboard_dismiss="true"/>
 
-
-    <android.support.v7.widget.RecyclerView
+        <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
+            android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="vertical" />
 
 </LinearLayout>

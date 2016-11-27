@@ -1,18 +1,17 @@
 package com.example.aw.adapps.Activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.aw.adapps.Model.Adab;
 import com.example.aw.adapps.Adapter.AdabAdapter;
+import com.example.aw.adapps.Model.Adab;
 import com.example.aw.adapps.R;
 
 import java.util.ArrayList;
