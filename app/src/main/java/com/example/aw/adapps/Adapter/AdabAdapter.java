@@ -6,6 +6,7 @@ package com.example.aw.adapps.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
         public TextView title, count;
         public ImageView thumbnail;
         public Button bDetail;
+        public CardView cv;
 
         public MyViewHolder(View view) {
             super(view);
@@ -37,6 +39,7 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
             count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             bDetail = (Button) view.findViewById(R.id.bDetail);
+            cv = (CardView) view.findViewById(R.id.cv);
         }
     }
 
@@ -60,9 +63,9 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
         holder.count.setText(adab.getDeskripsi() + " songs");
         Glide.with(mContext).load(adab.getUrlImage()).into(holder.thumbnail);
 
-        holder.bDetail.setOnClickListener(new View.OnClickListener() {
+        holder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick( View v) {
                 Toast.makeText(mContext, "pilih "+adab.getNama(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(mContext, MenuUtamaDetails.class);
                 intent.putExtra("idd", adab.getId());

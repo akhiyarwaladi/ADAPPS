@@ -15,7 +15,7 @@
             android:id="@+id/tool_bar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/transparent"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
@@ -30,7 +30,7 @@
             app:floatingSearch_searchHint="Search..."
             app:floatingSearch_suggestionsListAnimDuration="250"
             app:floatingSearch_showSearchKey="false"
-            app:floatingSearch_leftActionMode="showHamburger"
+            app:floatingSearch_leftActionMode="showSearch"
             app:floatingSearch_close_search_on_keyboard_dismiss="true"/>
     </android.support.design.widget.AppBarLayout>
 
