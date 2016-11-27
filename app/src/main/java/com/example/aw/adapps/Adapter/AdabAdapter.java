@@ -20,6 +20,7 @@ import com.bumptech.glide.Glide;
 import com.example.aw.adapps.Activities.MenuUtamaDetails;
 import com.example.aw.adapps.Model.Adab;
 import com.example.aw.adapps.R;
+
 import java.util.List;
 
 public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> {
@@ -77,9 +78,9 @@ public class AdabAdapter extends RecyclerView.Adapter<AdabAdapter.MyViewHolder> 
             }
         });
     }
-    //iseng iseng aja
     @Override
     public int getItemCount() {
         return adabList.size();
     }
+
 }
