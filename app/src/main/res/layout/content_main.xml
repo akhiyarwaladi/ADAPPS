@@ -10,9 +10,10 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <com.arlib.floatingsearchview.FloatingSearchView
+
             android:id="@+id/floating_search_view"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="135dp"
             android:layout_weight="1"
             app:floatingSearch_searchBarMarginLeft="7dp"
             app:floatingSearch_searchBarMarginTop="7dp"
