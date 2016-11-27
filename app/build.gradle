@@ -44,4 +44,5 @@ dependencies {
     compile 'com.google.android:flexbox:0.2.4'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
     compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.github.arimorty:floatingsearchview:2.0.3'
 }
